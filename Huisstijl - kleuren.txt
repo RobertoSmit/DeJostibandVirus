@@ -1,0 +1,6 @@
+HUISTIJL
+
+Groen - #19a282
+Lichtgroen - #5cc7b1
+Lichtgrijs - #e8e9ed
+Donkergrijs - #1d2226
