@@ -13,15 +13,10 @@
     <div class="main">
     
     <h1> Log in </h1>
-    <br> <br>
 
-    <input type="text" name="username" id="username" placeholder="username"><br>
-    <input type="password" name="password" id="password" placeholder="password"><br>
-    <input type="submit" name="submit" id="submit" value='Log in'><br>
-    
-    <h3> OR </h3><br>
-
-    <a id="login" href="> Register </a>        
+    <input type="text" name="username" id="username" placeholder="Gebruikersnaam"><br>
+    <input type="password" name="password" id="password" placeholder="Wachtwoord"><br>
+    <input type="submit" name="submit" id="submit" value='Log in'><br>     
     
     </div>
 
