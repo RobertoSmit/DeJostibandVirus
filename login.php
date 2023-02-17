@@ -40,7 +40,7 @@ if (isset($_POST['login'])) {
     $getPassword = $_POST['wachtwoord'];
 
     if($username === $getUserName && $wachtwoord === $getPassword) {
-        header("location: gebruiker.php");
+        header("location: gebruiker.php");  
     }else {
         header("location: login.php");
     }
