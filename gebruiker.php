@@ -8,19 +8,31 @@
     <title>Gebruiker - De JostibandVirus</title>
 </head>
 <body>
-    <div class="main-gebruiker">
-        <h1>Zieke Docenten</h1>
-        <table>
-            <tr>
-                <th>Voornaam</th>
-                <th>Achternaam</th>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table> 
-    </div>
 </body>
 </html>
+
+<?php
+include ('connection.php');
+
+$result = mysqli_query($connect, "SELECT * FROM ziekmeldingen");
+
+echo '<div class="main-gebruiker">
+    <h1>Zieke Docenten</h1>
+    <table>
+    <tr class="table-header">
+    <th>Voornaam</th>
+    <th>Achternaam</th>
+    </tr>';
+
+while($row = mysqli_fetch_array($result))
+{
+echo "<tr>";
+echo "<td>" . $row['voornaam'] . "</td>";
+echo "<td>" . $row['achternaam'] . "</td>";
+echo "</tr>";
+}
+echo "</table>";
+echo "</div>";
+
+
+

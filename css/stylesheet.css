@@ -9,27 +9,12 @@ body{
     background-color: #e8e9ed;
 }
 
+/* Start login pagina*/
 .main-login{
     text-align: center;
     padding: 10px;
     margin: 10px;
     margin-top: 25vh;
-}
-
-.main-gebruiker{
-    text-align: center;
-    padding: 10px;
-    margin: 10px;
-}
-
-.main-gebruiker th, .main-gebruiker tr{
-    border-bottom: solid black;
-}
-
-.main-gebruiker h1, .main-gebruiker table{
-    margin-left: 30%;
-    margin-right: 30%;
-    border-bottom: solid black;
 }
 
 .main-login input,select{
@@ -53,8 +38,36 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #5cc7b1;
 }
+/* Eind login pagina*/
 
-.ziekeDocentenTabel th{
+/*Gebruiker pagina*/
+.main-gebruiker{
     text-align: center;
-    border: solid black;
+    padding: 10px;
+    margin: 10px;
+    color: #1d2226;
 }
+
+.main-gebruiker table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+  }
+  
+ .main-gebruiker td, th {
+    border: 1px solid #19a282;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+
+  .main-gebruiker th {
+    background-color: #19a282;
+    color: white;
+  }
+  
+  .main-gebruiker tr:nth-child(odd) {
+    background-color: #dedede;
+  }
+/* Eind Gebruiker pagina*/ 

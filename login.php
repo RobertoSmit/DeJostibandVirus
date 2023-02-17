@@ -14,15 +14,36 @@
     
     <h1> Log in </h1>
 
-    <input type="text" name="username" id="username" placeholder="Gebruikersnaam"><br>
-    <input type="password" name="password" id="password" placeholder="Wachtwoord"><br>
-    <input type="submit" name="submit" id="submit" value='Log in'><br>     
-    </div>  
+    <form method="post">
+
+    <input type="text" name="gebruikersnaam" id="username" placeholder="Gebruikersnaam"><br>
+    <input type="password" name="wachtwoord" id="password" placeholder="Wachtwoord"><br>
+    <input type="submit" name="login" id="submit" value='Log in'><br>     
+    </div>
+    
+    </form>  
 </body>
 </html>
 
 <?php
 include ('connection.php');
+
+$username = "fkayyal";
+$wachtwoord = "fkayyal123";
+
+if (isset($_POST['login'])) {
+
+    $getUserName = $_POST['gebruikersnaam'];
+    $getPassword = $_POST['wachtwoord'];
+
+    if($username === $getUserName && $wachtwoord === $getPassword) {
+        echo "Het werkt";
+    }else {
+        echo "Fout";
+    }
+
+}
+
 
 
 ?>

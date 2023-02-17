@@ -1,5 +1,4 @@
 <?php
-
-$con = mysqli_connect('localhost', 'root', '', 'zieke_docenten');
+$connect = mysqli_connect('localhost', 'root', '', 'zieke_docenten');
 
 ?>
