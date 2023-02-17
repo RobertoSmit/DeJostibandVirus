@@ -17,9 +17,12 @@
     <input type="text" name="username" id="username" placeholder="Gebruikersnaam"><br>
     <input type="password" name="password" id="password" placeholder="Wachtwoord"><br>
     <input type="submit" name="submit" id="submit" value='Log in'><br>     
-    
-    </div>
-
-     
+    </div>  
 </body>
 </html>
+
+<?php
+include ('connection.php');
+
+
+?>
