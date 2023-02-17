@@ -31,19 +31,20 @@ include ('connection.php');
 $username = "fkayyal";
 $wachtwoord = "fkayyal123";
 
+$username = "roberto";
+$wachtwoord = "roberto123";
+
 if (isset($_POST['login'])) {
 
     $getUserName = $_POST['gebruikersnaam'];
     $getPassword = $_POST['wachtwoord'];
 
     if($username === $getUserName && $wachtwoord === $getPassword) {
-        echo "Het werkt";
+        header("location: gebruiker.php");
     }else {
-        echo "Fout";
+        header("location: login.php");
     }
 
 }
-
-
 
 ?>
