@@ -23,14 +23,16 @@ echo '<div class="main-gebruiker">
     <tr class="table-header">
     <th>Voornaam</th>
     <th>Achternaam</th>
+    <th>Afwezig sinds:</th>
     </tr>';
 
 while($row = mysqli_fetch_array($result))
 {
-if ($currentDate > $row['datum']) {
+if ($row['eindDatum'] == null) {
     echo "<tr>";
     echo "<td>" . $row['voornaam'] . "</td>";
     echo "<td>" . $row['achternaam'] . "</td>";
+    echo "<td>" . $row['beginDatum'] . "</td>";
     echo "</tr>";
     }
 }
