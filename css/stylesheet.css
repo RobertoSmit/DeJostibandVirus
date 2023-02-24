@@ -75,7 +75,6 @@ input[type="submit"]:hover, #options input[type="submit"]:hover {
 /*---------- beheerderspagina ----------*/
 #tables {
     grid-column: 1 / 2;
-    background-color: #19a282;
 }
 
 #options {
