@@ -1,6 +1,5 @@
 <?php
 include ('connection.php');
-
 $username = filter_input(INPUT_POST,'gebruikersnaam', FILTER_SANITIZE_STRING);
 $password = $_POST['wachtwoord'];
 $query = $db->prepare('SELECT * FROM gebruikers WHERE gebruikersnaam = :user');
