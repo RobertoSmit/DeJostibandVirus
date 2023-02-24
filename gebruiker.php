@@ -28,7 +28,7 @@
 
     while($row = mysqli_fetch_array($result))
     {
-    if ($row['eindDatum'] == null) {
+    if ($row['eindDatum'] == null || $row['eindDatum'] == "0000-00-00") {
         echo "<tr>";
         echo "<td>" . $row['voornaam'] . "</td>";
         echo "<td>" . $row['achternaam'] . "</td>";
