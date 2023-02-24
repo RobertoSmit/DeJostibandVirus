@@ -15,6 +15,7 @@
 include ('connection.php');
 
 $result = mysqli_query($connect, "SELECT * FROM ziekmeldingen");
+$currentDate = getdate();
 
 echo '<div class="main-gebruiker">
     <h1>Zieke Docenten</h1>
@@ -22,17 +23,22 @@ echo '<div class="main-gebruiker">
     <tr class="table-header">
     <th>Voornaam</th>
     <th>Achternaam</th>
+    <th>Afwezig sinds:</th>
     </tr>';
 
 while($row = mysqli_fetch_array($result))
 {
-echo "<tr>";
-echo "<td>" . $row['voornaam'] . "</td>";
-echo "<td>" . $row['achternaam'] . "</td>";
-echo "</tr>";
+if ($row['eindDatum'] == null) {
+    echo "<tr>";
+    echo "<td>" . $row['voornaam'] . "</td>";
+    echo "<td>" . $row['achternaam'] . "</td>";
+    echo "<td>" . $row['beginDatum'] . "</td>";
+    echo "</tr>";
+    }
 }
 echo "</table>";
 echo "</div>";
 
+mysqli_close($connect);
 
 
