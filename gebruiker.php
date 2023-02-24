@@ -12,31 +12,32 @@
 </html>
 
 <?php
-include ('connection.php');
+    include ('connection.php');
 
-$result = mysqli_query($connect, "SELECT * FROM ziekmeldingen");
-$currentDate = getdate();
+    $result = mysqli_query($connect, "SELECT * FROM ziekmeldingen");
+    $currentDate = getdate();
 
-echo '<div class="main-gebruiker">
-    <h1>Zieke Docenten</h1>
-    <table>
-    <tr class="table-header">
-    <th>Voornaam</th>
-    <th>Achternaam</th>
-    <th>Afwezig sinds:</th>
-    </tr>';
+    echo '<div class="main-gebruiker">
+        <h1>Zieke Docenten</h1>
+        <table>
+        <tr class="table-header">
+        <th>Voornaam</th>
+        <th>Achternaam</th>
+        <th>Afwezig sinds:</th>
+        </tr>';
 
-while($row = mysqli_fetch_array($result))
-{
-if ($row['eindDatum'] == null) {
-    echo "<tr>";
-    echo "<td>" . $row['voornaam'] . "</td>";
-    echo "<td>" . $row['achternaam'] . "</td>";
-    echo "<td>" . $row['beginDatum'] . "</td>";
-    echo "</tr>";
+    while($row = mysqli_fetch_array($result))
+    {
+    if ($row['eindDatum'] == null) {
+        echo "<tr>";
+        echo "<td>" . $row['voornaam'] . "</td>";
+        echo "<td>" . $row['achternaam'] . "</td>";
+        echo "<td>" . $row['beginDatum'] . "</td>";
+        echo "</tr>";
+        }
     }
-}
-echo "</table>";
-echo "</div>";
+    echo "</table>";
+    echo "</div>";
 
-mysqli_close($connect);
+    mysqli_close($connect);
+?>
