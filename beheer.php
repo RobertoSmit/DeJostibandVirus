@@ -55,7 +55,7 @@
 
                     while($row = mysqli_fetch_array($result))
                     {
-                    if ($row['eindDatum'] == null) {
+                    if ($row['eindDatum'] == null || $row['eindDatum'] == "0000-00-00") {
                         echo "<tr>";
                         echo "<td>" . $row['voornaam'] . "</td>";
                         echo "<td>" . $row['achternaam'] . "</td>";
@@ -70,15 +70,17 @@
                 ?>
             </div>
             <div id="options">
-                <h1>ziek/better melden</h1>
-                <div>Docent</div><br>
-                <input type="text" placeholder="name"><br>
-                <div>Begin datum</div><br>
-                <input type="date" value="" name="beginDatum"><br>
-                <div>Eind datum</div><br>
-                <input type="date" value="" name="eindDatum"><br>
-                <input type="submit" name="login" id="submit" value='opslaan'><br>
-
+                <form action="send_data.php" method="post">
+                    <h1>ziek/better melden</h1>
+                    <div>Docent</div><br>
+                    <input type="text" name="voornaam" placeholder="voornaam"><br>
+                    <input type="text" name="achternaam" placeholder="achternaam"><br>
+                    <div>Begin datum</div><br>
+                    <input type="date" value="" name="beginDatum"><br>
+                    <div>Eind datum</div><br>
+                    <input type="date" value="" name="eindDatum"><br>
+                    <input type="submit" name="save" id="submit" value='opslaan'><br>
+                </form>
                 <!-- krijg je een beginDatum binnen vul het in de ziek meld tabel in. en check of de docent in de docenten tabel staat.
                 krijg je een eindDatum binnen vul die in bij de juiste docent in de ziekmeldingen tabel die al een begindatum heeft. -->
 
