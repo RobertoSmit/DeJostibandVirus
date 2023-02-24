@@ -14,7 +14,7 @@
     
     <h1> Log in </h1>
 
-    <form method="post">
+    <form action = "verwerk_login.php" method="post">
 
     <input type="text" name="gebruikersnaam" id="username" placeholder="Gebruikersnaam"><br>
     <input type="password" name="wachtwoord" id="password" placeholder="Wachtwoord"><br>
@@ -24,27 +24,3 @@
     </form>  
 </body>
 </html>
-
-<?php
-include ('connection.php');
-
-$username = "fkayyal";
-$wachtwoord = "fkayyal123";
-
-$username = "roberto";
-$wachtwoord = "roberto123";
-
-if (isset($_POST['login'])) {
-
-    $getUserName = $_POST['gebruikersnaam'];
-    $getPassword = $_POST['wachtwoord'];
-
-    if($username === $getUserName && $wachtwoord === $getPassword) {
-        header("location: gebruiker.php");  
-    }else {
-        header("location: login.php");
-    }
-
-}
-
-?>
